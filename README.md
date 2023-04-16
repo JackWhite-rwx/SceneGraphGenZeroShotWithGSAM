@@ -68,7 +68,8 @@ open "Object-Oriented_SG_Drawing.html" file
 click on the button "Load JSON" and choose the file "scenegraph.json"
 ![](./assets/scene_graph_gen_demo.PNG)
 
-
+by the way,the object detection result at "./outputs"
+![](./outputs/automatic_label_output.jpg)
 
 
 ## :cupid: Acknowledgements
