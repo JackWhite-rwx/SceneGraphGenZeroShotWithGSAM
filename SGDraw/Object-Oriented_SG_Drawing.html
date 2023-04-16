@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./go.js"></script>
+    <script type="text/javascript" src="./FileSaver.js"></script>
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <link href="SG.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div style="position: absolute" id="myDiagramDiv">
+    </div>
+    <div style="position: absolute" id="myPaletteDiv">
+    </div>
+    <div style="position: absolute" id="myPaletteDiv2">
+    </div>
+    <div style="position: absolute" id="myPaletteDiv3">
+    </div>
+    <div style="position: absolute" id="myPaletteDiv4">
+    </div>
+    <div style="position: absolute" id="myPaletteDiv5">
+    </div>
+
+    <div id="keybutton">
+        <select name="list" id="list">
+            <option></option>
+        </select>
+        <button id="previousimage" onclick="previous()">Previous Image</button>
+        <button id="nextimage" onclick="next()">Next Image</button>
+        <button id="loadfiles">Load JSON</button>
+        <button id="SaveButton" onclick="save()">Save</button>
+        <button id="savemodel" onclick="addItems()">Save model</button>
+        <input type="file" id="files" value="load" onclick="load()" name="load">
+    </div>
+    
+    <div style="width: 50%; height: 90%;" id="showimages">
+      
+    </div>
+    <div id="relationshipTool">
+
+    </div>
+   
+</body>
+
+<script type="text/javascript" src="./SG.js"></script>
+
+</html>

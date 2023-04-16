@@ -1,0 +1,615 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat";
+    /*background-image: linear-gradient(125deg,#2c3e50,#27ae60,#2980b9,#e74c3c,#8e44ad);
+    background-size: 400%;
+    animation: bganimation 15s infinite; */
+    background-color: #F8F8F8;
+}
+/*
+@keyframes bganimation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+*/
+/* #rightClick{
+    background-color: #ff7400;
+    list-style-type: none;
+    position: absolute;
+    padding:0px;
+    border:1px solid #000;
+    visibility: hidden;
+} */
+#myDiagramDiv {
+    width: 43%;
+    height: 100%;
+    right: 7%;
+    background-color: #F8F8F8;
+    border: 1px solid #aaa;
+    z-index: 1;
+
+}
+
+#myPaletteDiv{
+    width: 7%;
+    height: 20%;
+    right: 0;
+    top: 0;
+    background-color: #F8F8F8;
+    border: 1px solid #aaa;
+    z-index: 1;
+    display: none;
+}
+#myPaletteDiv2{
+    width: 7%;
+    height: 10%;
+    right: 0;
+    top: 20%;
+    background-color: #F8F8F8;
+    border: 1px solid #aaa;
+    z-index: 1;
+    display: none;
+}
+#myPaletteDiv3{
+    width: 7%;
+    height: 26%;
+    right: 0;
+    top: 30%;
+    background-color: #F8F8F8;
+    border: 1px solid #aaa;
+    z-index: 1;
+    display: none;
+}
+#myPaletteDiv4{
+    width: 7%;
+    height: 26%;
+    right: 0;
+    top: 56%;
+    background-color: #F8F8F8;
+    border: 1px solid #aaa;
+    z-index: 1;
+    display: none;
+}
+#myPaletteDiv5{
+    width: 7%;
+    height: 18%;
+    right: 0;
+    top: 82%;
+    background-color: #F8F8F8;
+    border: 1px solid #aaa;
+    z-index: 1;
+    display: none;
+}
+
+/* #showimages{
+    width: 50%;
+    height: 90%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+} */
+
+#showimages{
+    background-color: #fff;
+    width: 50%;
+    height: 93%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing:border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+#showimages{
+    padding: 10px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+}
+#showimages::after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left:5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 5px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 15%, transparent 50%,transparent 85%,rgba(255,255,255,0.3) 100%);
+}
+
+
+
+#keybutton{
+    background-color: #fff;
+    width: 50%;
+    height: 7%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing:border-box
+}
+#keybutton{
+    padding: 10px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+}
+#keybutton::after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left:5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 5px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 15%, transparent 50%,transparent 85%,rgba(255,255,255,0.3) 100%);
+}
+
+
+
+
+
+body{
+    /* 100%的窗口高度 */
+    height: 100vh;
+    width: 100vh;
+    /* 弹性布局 水平+垂直居中 */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* 渐变背景 */
+    /*background: linear-gradient(200deg,#f3e7e9,#e3eeff);*/
+}
+
+.container{
+    background-color: #fff;
+    width: 25%;
+    height: 10%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    box-sizing:border-box
+}
+.container{
+    padding: 10px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+}
+.container::after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left:5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 5px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 15%, transparent 50%,transparent 85%,rgba(255,255,255,0.3) 100%);
+}
+
+
+.containerA{
+    background-color: #fff;
+    width: 25%;
+    height: 60%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 11%;
+    right: 10px;
+    box-sizing:border-box;
+    z-index: 25;
+}
+.containerA{
+    padding: 10px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+}
+.containerA::after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left:5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 5px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 15%, transparent 50%,transparent 85%,rgba(255,255,255,0.3) 100%);
+}
+
+
+.containerR{
+    background-color: #fff;
+    width: 25%;
+    height: 25%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 71%;
+    right: 10px;
+    box-sizing:border-box;
+    z-index: 25;
+}
+.containerR{
+    padding: 10px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+}
+.containerR::after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left:5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 5px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 15%, transparent 50%,transparent 85%,rgba(255,255,255,0.3) 100%);
+}
+
+.attribute-box,.relationship-box{
+    /* 弹性布局 Button垂直排列 */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.hidden{
+    display: none;
+    transition: 0.5s;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 1px;
+    /* 字间距 */
+    color: snow;
+    letter-spacing: 3px;
+}
+h5{
+    text-align: center;
+    margin-bottom: 1px;
+    /* 字间距 */
+    color: snow;
+    letter-spacing: 3px;
+}
+
+#openfolder{
+    width: 10%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    color: #a262ad;
+    letter-spacing: 0.1px;
+    border: none;
+    cursor: pointer;
+    border-radius: 1px;
+    background-color: lightblue;
+}
+#openfolder:hover{
+    background-color: #a262ad;
+    color: yellow;
+    transition: background-color 0.5s ease;
+}
+
+#list{
+    width: 10%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    color: #a262ad;
+}
+#savemodel{
+    width: 10%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    color: #a262ad;
+    letter-spacing: 0.1px;
+    border: none;
+    cursor: pointer;
+    border-radius: 1px;
+    background-color: lightblue;
+}
+#savemodel:hover{
+    background-color: #a262ad;
+    color: yellow;
+    transition: background-color 0.5s ease;
+}
+#previousimage{
+    width: 10%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    color: #a262ad;
+    letter-spacing: 0.1px;
+    border: none;
+    cursor: pointer;
+    border-radius: 1px;
+    background-color: lightblue;
+}
+#previousimage:hover{
+    background-color: #a262ad;
+    color: yellow;
+    transition: background-color 0.5s ease;
+}
+#nextimage{
+    width: 10%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    color: #a262ad;
+    letter-spacing: 0.1px;
+    border: none;
+    cursor: pointer;
+    border-radius: 1px;
+    background-color: lightblue;
+}
+#nextimage:hover{
+    background-color: #a262ad;
+    color: yellow;
+    transition: background-color 0.5s ease;
+}
+
+
+
+#loadfiles{
+    width: 10%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    color: #a262ad;
+    letter-spacing: 0.1px;
+    border: none;
+    cursor: pointer;
+    border-radius: 1px;
+    background-color: lightblue;
+}
+#loadfiles:hover{
+    background-color: #a262ad;
+    color: yellow;
+    transition: background-color 0.5s ease;
+}
+
+#SaveButton{
+    width: 10%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    color: #a262ad;
+    letter-spacing: 0.1px;
+    border: none;
+    cursor: pointer;
+    border-radius: 1px;
+    background-color: lightblue;
+}
+#SaveButton:hover{
+    background-color: #a262ad;
+    color: yellow;
+    transition: background-color 0.5s ease;
+}
+
+
+#files{
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    width: 10%;
+    height: 60%;
+    opacity: 0;
+}
+#loadfiles{
+    width: 10%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    color: #a262ad;
+    letter-spacing: 0.1px;
+    border: none;
+    cursor: pointer;
+    border-radius: 1px;
+    background-color: lightblue;
+}
+#loadfiles:hover{
+    background-color: #a262ad;
+    color: yellow;
+    transition: background-color 0.5s ease;
+}
+
+.obj-box{
+    justify-content: center;
+    align-items: center;
+}
+.obj-box{
+   position: absolute;
+   top: 0;
+   left: 10%;
+   width: 100%;
+   height: auto;
+}
+.obj-box button{
+    width: 20%;
+    margin-top: 1px;
+    background-color: #f6f6f6;
+    outline: none;
+    border-radius: 1px;
+    padding: 1px;
+    color: #a262ad;
+    letter-spacing: 0.1px;
+    border: none;
+    cursor: pointer;
+}
+.obj-box button:hover{
+    background-color: #a262ad;
+    color: #f6f6f6;
+    transition: background-color 0.5s ease;
+}
+
+.attri-box{
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.attri-box button{
+    width: 10%;
+    margin-top: 1px;
+    background-color: #f6f6f6;
+    outline: none;
+    border-radius: 1px;
+    padding: 1px;
+    color: #a262ad;
+    letter-spacing: 0.1px;
+    border: none;
+    cursor: pointer;
+}
+.attri-box button:hover{
+    background-color: #a262ad;
+    color: #f6f6f6;
+    transition: background-color 0.5s ease;
+}
+
+
+.rel-box{
+    justify-content: center;
+    align-items: center;
+}
+.rel-box{
+   position: absolute;
+   top: 0;
+   left: 2%;
+   width: 100%;
+   height: 60%;
+}
+.rel-box button{
+    width:23% ;
+    margin-top: 1px;
+    background-color: #f6f6f6;
+    outline: none;
+    border-radius: 1px;
+    padding: 1px;
+    color: #a262ad;
+    letter-spacing: 0.1px;
+    border: none;
+    cursor: pointer;
+}
+.rel-box button:hover{
+    background-color: #a262ad;
+    color: #f6f6f6;
+    transition: background-color 0.5s ease;
+}
+#addrel{
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    height: 40%;
+    width: 100%;
+}
+
+
+.attri-box1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    padding: 0;
+}
+.attri-box1 button{
+    width: 11%;
+}
+
+.attri-box2{
+    position: absolute;
+    top: 25%;
+    height: 15%;
+    width: 100%;
+    padding: 0;
+}
+.attri-box2 button{
+    width: 23%;
+}
+
+.attri-box3{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    height: 22%;
+    width: 100%;
+    padding: 0;
+}
+.attri-box3 button{
+    width: 18.5%;
+}
+.attri-box4{
+    position: absolute;
+    top: 62%;
+    height: 18%;
+    width: 100%;
+    padding: 0;
+}
+.attri-box4 button{
+    width: 11%;
+}
+#addatt{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    height: 15%;
+    width: 100%;
+}
+
+.add button{
+    width: 88%;
+    margin-top: 1px;
+    background-color: #f6f6f6;
+    outline: none;
+    border-radius: 1px;
+    padding: 1px;
+    color: #a262ad;
+    letter-spacing: 0.1px;
+    border: none;
+    cursor: pointer;
+}
+.add button:hover{
+    background-color: #a262ad;
+    color: #f6f6f6;
+    transition: background-color 0.5s ease;
+}
+
+.commonbutton{
+    border-radius: 1px,solod,black;
+    background-color: lightblue;
+    position: absolute;
+}
