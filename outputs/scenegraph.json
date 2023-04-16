@@ -1,0 +1,1 @@
+{"class":"GraphLinksModel","nodeDataArray":[{"key":"woman","color":"#ec8c69"},{"key":"beach","color":"#ec8c69"},{"key":"dog","color":"#ec8c69"},{"key":"sitting on","color":"yellow"},{"key":"with","color":"yellow"}],"linkDataArray":[{"from":"woman","to":"sitting on"},{"from":"sitting on","to":"beach"},{"from":"woman","to":"with"},{"from":"with","to":"dog"}]}
