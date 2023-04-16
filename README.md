@@ -62,7 +62,9 @@ cd SGDraw
 python -m http.server
 ```
 Open in browser "localhost:8000"
-open Object-Oriented_SG_Drawing.html file
+
+open "Object-Oriented_SG_Drawing.html" file
+
 click on the button "Load JSON" and choose the file "scenegraph.json"
 ![](./assets/scene_graph_gen_demo.PNG)
 
